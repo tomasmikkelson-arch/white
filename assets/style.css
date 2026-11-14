@@ -206,6 +206,13 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; letter-sp
 .step__n { margin: 0 0 8px; color: var(--blue-ink); font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
 .step h3 { font-size: 21px; line-height: 1.15; margin-bottom: 10px; }
 .step p:last-child { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.55; }
+.step p a { color: var(--blue-ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--blue-30); text-underline-offset: 3px; transition: text-decoration-color .2s; }
+.step p a:hover { text-decoration-color: currentColor; }
+.step__list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+.step__list li { position: relative; padding-left: 16px; }
+.step__list li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 2px; background: var(--blue); }
+.step--final { background: var(--blue-10); }
+.step--final:hover { background: #fff; }
 
 /* ───────── архів ───────── */
 .archive { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }

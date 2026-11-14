@@ -21,7 +21,7 @@
 <link rel="icon" href="assets/wl-icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/KyivTypeSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/style.css?v=202611142119">
+<link rel="stylesheet" href="assets/style.css?v=202611142150">
 </head>
 <body>
 
@@ -53,7 +53,7 @@
     <nav class="topnav" aria-label="Розділи">
       <span class="topnav__pill" aria-hidden="true"></span>
       <a href="#latest"><span>Останні випуски</span></a>
-      <a href="#method"><span>Як оцінюємо</span></a>
+      <a href="#method"><span>Як потрапити</span></a>
       <a href="#archive"><span>Архів</span></a>
     </nav>
   </div>
@@ -117,7 +117,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2>Свіжі результати моніторингу</h2>
-      <p class="sec-head__note">Кожен випуск підсумовує двоетапний глибинний моніторинг онлайн-медіа, який ІМІ проводить двічі на рік.</p>
+      <p class="sec-head__note">Кожен випуск підсумовує глибинний моніторинг онлайн-медіа, який ІМІ проводить двічі на рік.</p>
     </div>
 
     <div class="featured">
@@ -178,33 +178,37 @@
 <section class="section section--tint" id="method">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Два етапи перевірки</h2>
-      <p class="sec-head__note">Щоб потрапити до списку, медіа має пройти обидва етапи глибинного моніторингу.</p>
+      <h2>Як медіа потрапляє до Білого списку</h2>
+      <p class="sec-head__note">Відбір складається з трьох кроків. До списку вносять медіа, які пройшли їх усі.</p>
     </div>
     <div class="steps">
       <div class="step reveal">
         <span class="step__ico"><svg><use href="#i-search"/></svg></span>
-        <p class="step__n">Етап 1</p>
-        <h3>Відбір і перевірка на маніпуляції</h3>
-        <p>Близько 50 популярних онлайн-медіа, відібраних за даними попередніх моніторингів ІМІ, SimilarWeb і Gemius, перевіряють на маніпуляції, фейки та чорний піар.</p>
+        <p class="step__n">Крок 1</p>
+        <h3>Формування вибірки</h3>
+        <p>Для моніторингу відбирають 50 найпопулярніших загальнонаціональних онлайн-медіа за даними SimilarWeb і попередніх моніторингів ІМІ. Медіа поза вибіркою можуть подати заявку на <a href="https://map.detector.media/" target="_blank" rel="noopener">Мапу рекомендованих медіа</a>: якщо експертний моніторинг покаже дотримання стандартів щонайменше на 95%, медіа потрапить до наступного моніторингу Білого списку.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step__ico"><svg><use href="#i-check"/></svg></span>
+        <p class="step__n">Крок 2</p>
+        <h3>Перевірка на добросовісність</h3>
+        <p>Експерти оцінюють відібрані медіа на наявність шкідливого контенту, фейків і чорного піару. Далі проходять лише ті, хто витримав цю перевірку.</p>
       </div>
       <div class="step reveal">
         <span class="step__ico"><svg><use href="#i-scale"/></svg></span>
-        <p class="step__n">Етап 2</p>
-        <h3>Професійні стандарти</h3>
-        <p>Баланс думок, достовірність, відокремлення фактів від коментарів. Окремо рахують джинсу, сексизм, мову ворожнечі та шкідливий контент.</p>
+        <p class="step__n">Крок 3</p>
+        <h3>Глибинне оцінювання</h3>
+        <ul class="step__list">
+          <li>стандарти балансу, достовірності та відокремлення фактів від коментарів</li>
+          <li>наявність джинси, сексизму та мови ворожнечі</li>
+          <li>прозорість: контакти на сайті, редакційні політики, прозорість медіавласності</li>
+        </ul>
       </div>
-      <div class="step reveal">
-        <span class="step__ico"><svg><use href="#i-eye"/></svg></span>
-        <p class="step__n">Етап 2</p>
-        <h3>Прозорість редакції</h3>
-        <p>Чи є на сайті контакти й редакційна політика, чи відомо, кому належить медіа, і чи чітко позначено рекламні матеріали.</p>
-      </div>
-      <div class="step reveal">
-        <span class="step__ico"><svg><use href="#i-refresh"/></svg></span>
-        <p class="step__n">Двічі на рік</p>
-        <h3>Регулярне оновлення</h3>
-        <p>Список переглядають кожного півріччя: одні медіа входять до нього вперше, інші повертаються або випадають.</p>
+      <div class="step step--final reveal">
+        <span class="step__ico"><svg><use href="#i-wl"/></svg></span>
+        <p class="step__n">Результат</p>
+        <h3>Внесення до Білого списку</h3>
+        <p>До списку потрапляють медіа, які за підсумками всіх етапів дотримуються професійних стандартів щонайменше на 95%. Список оновлюють двічі на рік.</p>
       </div>
     </div>
   </div>
@@ -292,6 +296,6 @@
   <div class="wrap footer__bottom">© Інститут масової інформації</div>
 </footer>
 
-<script src="assets/app.js?v=202611142119" defer></script>
+<script src="assets/app.js?v=202611142150" defer></script>
 </body>
 </html>
