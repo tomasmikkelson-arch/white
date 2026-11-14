@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="uk"><head><meta charset="utf-8">
+<style>
+@font-face { font-family: "KyivType Sans"; src: url("../assets/fonts/KyivTypeSans-Bold.woff2"); font-weight: 700; }
+@font-face { font-family: "KyivType Sans"; src: url("../assets/fonts/KyivTypeSans-Medium.woff2"); font-weight: 500; }
+@font-face { font-family: "Overpass"; src: url("../assets/fonts/overpass-cyrillic-600-normal.woff2"); font-weight: 600; unicode-range: U+0400-04FF; }
+@font-face { font-family: "Overpass"; src: url("../assets/fonts/overpass-latin-600-normal.woff2"); font-weight: 600; unicode-range: U+0000-00FF,U+2000-206F; }
+@font-face { font-family: "Overpass"; src: url("../assets/fonts/overpass-cyrillic-400-normal.woff2"); font-weight: 400; unicode-range: U+0400-04FF; }
+@font-face { font-family: "Overpass"; src: url("../assets/fonts/overpass-latin-400-normal.woff2"); font-weight: 400; unicode-range: U+0000-00FF,U+2000-206F; }
+* { box-sizing: border-box; margin: 0; }
+html, body { width: 1200px; height: 630px; overflow: hidden; }
+body { font-family: "Overpass", sans-serif; -webkit-font-smoothing: antialiased; }
+.v { position: relative; width: 1200px; height: 630px; overflow: hidden; display: none; }
+.show-a #a, .show-b #b, .show-c #c { display: block; }
+h1 { font-family: "KyivType Sans"; font-weight: 700; letter-spacing: -.025em; }
+.logos { display: flex; align-items: center; gap: 18px; background: #fff; border-radius: 18px; padding: 14px 20px; }
+.logos img { height: 42px; display: block; }
+.logos .eu { height: 44.5px; margin-block: -1.3px; }
+.logos i { width: 1px; height: 32px; background: #E1E4EF; }
+
+/* ── A: синій фірмовий */
+#a { background: #405BFF; color: #fff; }
+#a::before { content: ""; position: absolute; inset: 0; background: radial-gradient(700px 420px at 90% -10%, rgba(255,255,255,.22), transparent 60%), radial-gradient(600px 500px at -10% 120%, rgba(20,30,140,.5), transparent 60%); }
+#a .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 90px 90px; }
+#a .mark { position: absolute; right: -30px; bottom: -120px; width: 470px; opacity: .12; transform: rotate(-8deg); }
+#a .logos { position: absolute; left: 64px; top: 56px; }
+#a h1 { position: absolute; left: 64px; top: 186px; font-size: 78px; line-height: .98; width: 760px; }
+#a .sub { position: absolute; left: 64px; bottom: 60px; display: flex; gap: 12px; }
+#a .pill { display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 22px; border-radius: 99px; background: rgba(255,255,255,.14); border: 1.5px solid rgba(255,255,255,.3); font-weight: 600; font-size: 22px; }
+#a .pill b { font-family: "KyivType Sans"; font-size: 26px; }
+#a .icon { position: absolute; right: 70px; top: 150px; width: 250px; height: 250px; border-radius: 56px; box-shadow: 0 40px 80px -30px rgba(10,20,110,.8); }
+
+/* ── B: світлий з обкладинкою */
+#b { background: #F4F5FA; color: #1D1F2A; }
+#b .left { position: absolute; left: 64px; top: 0; bottom: 0; width: 520px; display: flex; flex-direction: column; justify-content: space-between; padding: 56px 0 58px; }
+#b .logos { padding: 0; background: none; }
+#b .tag { display: inline-flex; align-items: center; gap: 12px; color: #2C44E0; font-weight: 600; font-size: 21px; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 18px; }
+#b .tag img { width: 30px; }
+#b h1 { font-size: 58px; line-height: 1.02; }
+#b .meta { display: flex; gap: 10px; }
+#b .meta span { display: inline-flex; align-items: center; height: 46px; padding: 0 20px; border-radius: 99px; background: #fff; border: 1px solid #E1E4EF; font-weight: 600; font-size: 19px; color: #4A4F63; }
+#b .meta span b { color: #2C44E0; margin-right: 6px; font-family: "KyivType Sans"; }
+#b .cover { position: absolute; right: -40px; top: 60px; width: 640px; height: 510px; border-radius: 36px; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(20,28,80,.45); }
+#b .cover img { width: 100%; height: 100%; object-fit: cover; object-position: 45% 50%; }
+#b .cover .badge { position: absolute; left: 24px; top: 24px; background: #F8C828; color: #1D1F2A; font: 700 18px/1 "KyivType Sans"; letter-spacing: .05em; padding: 12px 18px; border-radius: 99px; text-transform: uppercase; }
+
+/* ── C: знак + перелік медіа */
+#c { background: linear-gradient(135deg, #4F69FF 0%, #405BFF 45%, #2C44E0 100%); color: #fff; }
+#c .mark { position: absolute; left: 64px; top: 64px; width: 118px; height: 118px; border-radius: 28px; box-shadow: 0 24px 50px -20px rgba(10,20,110,.8); }
+#c .logos { position: absolute; right: 64px; top: 64px; }
+#c h1 { position: absolute; left: 64px; top: 204px; font-size: 60px; line-height: 1.02; width: 1000px; }
+#c .lead { position: absolute; left: 64px; top: 344px; font-size: 24px; color: rgba(255,255,255,.85); width: 900px; }
+#c .chips { position: absolute; left: 64px; right: 64px; bottom: 52px; display: flex; flex-wrap: wrap; gap: 8px; }
+#c .chips span { height: 38px; display: inline-flex; align-items: center; padding: 3px 15px 0; border-radius: 99px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.24); font-weight: 600; font-size: 16.5px; }
+#c .bigmark { position: absolute; right: -60px; top: 120px; width: 420px; opacity: .1; transform: rotate(-8deg); }
+
+/* ── A2: обраний варіант */
+#d { background: #405BFF; color: #fff; }
+#d::before { content: ""; position: absolute; inset: 0; background: radial-gradient(700px 420px at 90% -10%, rgba(255,255,255,.22), transparent 60%), radial-gradient(600px 500px at -10% 120%, rgba(20,30,140,.5), transparent 60%); }
+#d .grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: 90px 90px; }
+#d .mark { position: absolute; right: -30px; bottom: -120px; width: 470px; opacity: .12; transform: rotate(-8deg); }
+#d .logos { position: absolute; left: 64px; top: 56px; }
+#d .row { position: absolute; left: 64px; right: 64px; top: 182px; bottom: 56px; display: flex; align-items: center; gap: 60px; }
+#d .icon { width: 240px; height: 240px; flex: none; margin-top: 14px; border-radius: 54px; box-shadow: 0 40px 80px -30px rgba(10,20,110,.8); }
+#d h1 { font-size: 80px; line-height: .98; }
+.show-d #d { display: block; }
+</style></head>
+<body>
+<div class="v" id="d">
+  <div class="grid"></div>
+  <img class="mark" src="../assets/wl-mark-white.svg">
+  <div class="logos"><img src="../assets/imi-logo.svg"><i></i><img class="eu" src="../assets/eu-logo.svg"></div>
+  <div class="row"><img class="icon" src="../assets/wl-icon.svg"><h1>Список прозорих<br>і&nbsp;відповідальних<br>медіа</h1></div>
+</div>
+
+<div class="v" id="a">
+  <div class="grid"></div>
+  <img class="mark" src="../assets/wl-mark-white.svg">
+  <div class="logos"><img src="../assets/imi-logo.svg"><i></i><img class="eu" src="../assets/eu-logo.svg"></div>
+  <h1>Список прозорих і&nbsp;відповідальних медіа</h1>
+  <img class="icon" src="../assets/wl-icon.svg">
+  <div class="sub"><span class="pill"><b>18</b> медіа у списку</span><span class="pill"><b>≈96%</b> дотримання стандартів</span><span class="pill">з 2019 року</span></div>
+</div>
+
+<div class="v" id="b">
+  <div class="left">
+    <div class="logos"><img src="../assets/imi-logo.svg"><i></i><img class="eu" src="../assets/eu-logo.svg"></div>
+    <div>
+      <p class="tag"><img src="../assets/wl-icon.svg">Білий список ІМІ</p>
+      <h1>Список прозорих і&nbsp;відповідальних медіа</h1>
+    </div>
+    <div class="meta"><span><b>18</b>медіа</span><span><b>≈96%</b>стандартів</span><span>з 2019 року</span></div>
+  </div>
+  <div class="cover"><img src="../assets/img/cover-2026-1-2560.webp"><span class="badge">Перше півріччя 2026</span></div>
+</div>
+
+<div class="v" id="c">
+  <img class="bigmark" src="../assets/wl-mark-white.svg">
+  <img class="mark" src="../assets/wl-icon.svg">
+  <div class="logos"><img src="../assets/imi-logo.svg"><i></i><img class="eu" src="../assets/eu-logo.svg"></div>
+  <h1>Білий список ІМІ:<br>18&nbsp;найякісніших онлайн-медіа</h1>
+  <p class="lead">Список прозорих і відповідальних медіа, що оновлюється двічі на рік</p>
+  <div class="chips"><span>Суспільне Новини</span><span>Еспресо</span><span>Бабель</span><span>Радіо Свобода</span><span>hromadske</span><span>Українська правда</span><span>NV</span><span>Тексти</span><span>LB.ua</span><span>Укрінформ</span><span>Ґрати</span><span>Громадське радіо</span><span>Український тиждень</span><span>ZN.UA</span><span>Рубрика</span><span>Слово і Діло</span><span>Новинарня</span><span>Frontliner</span></div>
+</div>
+</body></html>
