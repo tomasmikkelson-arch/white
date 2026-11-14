@@ -26,8 +26,7 @@
   <symbol id="i-scale" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M5 7h14M12 4.5 12 7"/><path d="m5 7-3 6.5a3.3 3.3 0 0 0 6 0L5 7ZM19 7l-3 6.5a3.3 3.3 0 0 0 6 0L19 7Z"/></g></symbol>
   <symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></g></symbol>
   <symbol id="i-refresh" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.6-4.5M4 13a8 8 0 0 0 14.6 4.5"/><path d="M5 3v4h4M19 21v-4h-4"/></g></symbol>
-  <symbol id="i-h1" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 0 0 17Z" fill="currentColor"/></symbol>
-  <symbol id="i-h2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17Z" fill="currentColor"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="5" rx="1.5"/><path d="M5 9v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9M10 13h4"/></g></symbol>
   <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></g></symbol>
 </svg>
 
@@ -43,9 +42,10 @@
       <span>Білий<br>список</span>
     </a>
     <nav class="topnav" aria-label="Розділи">
-      <a href="#latest">Останні випуски</a>
-      <a href="#method">Як оцінюємо</a>
-      <a href="#archive">Архів</a>
+      <span class="topnav__pill" aria-hidden="true"></span>
+      <a href="#latest"><span>Останні випуски</span></a>
+      <a href="#method"><span>Як оцінюємо</span></a>
+      <a href="#archive"><span>Архів</span></a>
     </nav>
   </div>
 </header>
@@ -63,13 +63,13 @@
 
   <div class="wrap hero__in">
     <div class="hero__text">
-      <p class="eyebrow"><svg><use href="#i-check"/></svg>Білий список ІМІ<span class="eyebrow__dot" aria-hidden="true"></span>з 2019 року</p>
+      <p class="eyebrow"><svg><use href="#i-check"/></svg><span>Білий список ІМІ з 2019 року</span></p>
       <h1>Список прозорих і&nbsp;відповідальних медіа</h1>
       <p class="hero__lead">З 2019 року Інститут масової інформації оприлюднює Список прозорих і відповідальних медіа, відомий як Білий список. До нього потрапляють загальноукраїнські онлайн-медіа, які отримали найвищі бали за дотримання професійних стандартів і мають найнижчі показники маніпуляцій, джинси, фейків, сексизму та мови ворожнечі.</p>
       <p class="hero__lead hero__lead--sm">Рівень дотримання професійних стандартів у медіа зі списку в середньому становить близько 96%. Список оновлюється двічі на рік.</p>
       <div class="hero__cta">
-        <a class="btn btn--light" href="#latest">Переглянути останній список <svg><use href="#i-arrow"/></svg></a>
-        <a class="btn btn--ghost" href="#archive">Архів моніторингів</a>
+        <a class="btn btn--light" href="#latest"><span>Останній список</span><i class="btn__ico"><svg><use href="#i-arrow"/></svg></i></a>
+        <a class="btn btn--ghost" href="#archive"><span>Архів моніторингів</span><i class="btn__ico"><svg><use href="#i-archive"/></svg></i></a>
       </div>
     </div>
 
@@ -80,18 +80,18 @@
         <div class="stat"><b>2×</b><span>оновлення на рік</span></div>
       </div>
       <div class="chart">
-        <p class="chart__cap">Кількість медіа у списку</p>
-        <ol class="bars">
-          <li style="--v:10"><span class="bars__n">10</span><i></i><span class="bars__l">I·19</span></li>
-          <li style="--v:8"><span class="bars__n">8</span><i></i><span class="bars__l">I·21</span></li>
-          <li style="--v:10"><span class="bars__n">10</span><i></i><span class="bars__l">II·21</span></li>
-          <li style="--v:9"><span class="bars__n">9</span><i></i><span class="bars__l">II·22</span></li>
-          <li style="--v:9"><span class="bars__n">9</span><i></i><span class="bars__l">I·23</span></li>
-          <li style="--v:9"><span class="bars__n">9</span><i></i><span class="bars__l">II·23</span></li>
-          <li style="--v:11"><span class="bars__n">11</span><i></i><span class="bars__l">I·24</span></li>
-          <li style="--v:13"><span class="bars__n">13</span><i></i><span class="bars__l">II·24</span></li>
-          <li style="--v:17"><span class="bars__n">17</span><i></i><span class="bars__l">II·25</span></li>
-          <li style="--v:18" class="is-now"><span class="bars__n">18</span><i></i><span class="bars__l">I·26</span></li>
+        <div class="chart__head">
+          <p class="chart__cap">Кількість медіа у списку</p>
+          <ul class="legend"><li><i class="sw sw--h1"></i>перше півріччя</li><li><i class="sw sw--h2"></i>друге півріччя</li></ul>
+        </div>
+        <ol class="years">
+          <li style="--n:1"><div class="yr__bars"><span class="bar bar--h1" style="--v:10" tabindex="0" aria-label="Перше півріччя 2019: 10 медіа"><b>10</b><i></i><em class="tip">Перше півріччя 2019</em></span></div><span class="yr__l">2019</span></li>
+          <li style="--n:2"><div class="yr__bars"><span class="bar bar--h1" style="--v:8" tabindex="0" aria-label="Перше півріччя 2021: 8 медіа"><b>8</b><i></i><em class="tip">Перше півріччя 2021</em></span><span class="bar bar--h2" style="--v:10" tabindex="0" aria-label="Друге півріччя 2021: 10 медіа"><b>10</b><i></i><em class="tip">Друге півріччя 2021</em></span></div><span class="yr__l">2021</span></li>
+          <li style="--n:1"><div class="yr__bars"><span class="bar bar--h2" style="--v:9" tabindex="0" aria-label="Друге півріччя 2022: 9 медіа"><b>9</b><i></i><em class="tip">Друге півріччя 2022</em></span></div><span class="yr__l">2022</span></li>
+          <li style="--n:2"><div class="yr__bars"><span class="bar bar--h1" style="--v:9" tabindex="0" aria-label="Перше півріччя 2023: 9 медіа"><b>9</b><i></i><em class="tip">Перше півріччя 2023</em></span><span class="bar bar--h2" style="--v:9" tabindex="0" aria-label="Друге півріччя 2023: 9 медіа"><b>9</b><i></i><em class="tip">Друге півріччя 2023</em></span></div><span class="yr__l">2023</span></li>
+          <li style="--n:2"><div class="yr__bars"><span class="bar bar--h1" style="--v:11" tabindex="0" aria-label="Перше півріччя 2024: 11 медіа"><b>11</b><i></i><em class="tip">Перше півріччя 2024</em></span><span class="bar bar--h2" style="--v:13" tabindex="0" aria-label="Друге півріччя 2024: 13 медіа"><b>13</b><i></i><em class="tip">Друге півріччя 2024</em></span></div><span class="yr__l">2024</span></li>
+          <li style="--n:1"><div class="yr__bars"><span class="bar bar--h2" style="--v:17" tabindex="0" aria-label="Друге півріччя 2025: 17 медіа"><b>17</b><i></i><em class="tip">Друге півріччя 2025</em></span></div><span class="yr__l">2025</span></li>
+          <li style="--n:1"><div class="yr__bars"><span class="bar bar--h1 is-now" style="--v:18" tabindex="0" aria-label="Перше півріччя 2026: 18 медіа"><b>18</b><i></i><em class="tip">Перше півріччя 2026</em></span></div><span class="yr__l">2026</span></li>
         </ol>
       </div>
     </aside>
@@ -111,11 +111,8 @@
 <section class="section" id="latest">
   <div class="wrap">
     <div class="sec-head">
-      <div>
-        <p class="kicker">Останні випуски</p>
-        <h2>Свіжі результати моніторингу</h2>
-      </div>
-      <p class="sec-head__note">Кожен випуск — підсумок двоетапного глибинного моніторингу онлайн-медіа, який ІМІ проводить двічі на рік.</p>
+      <h2>Свіжі результати моніторингу</h2>
+      <p class="sec-head__note">Кожен випуск підсумовує двоетапний глибинний моніторинг онлайн-медіа, який ІМІ проводить двічі на рік.</p>
     </div>
 
     <div class="featured">
@@ -127,13 +124,13 @@
           <span class="card__go"><svg><use href="#i-arrow"/></svg></span>
         </a>
         <div class="card__body">
-          <p class="card__period"><svg><use href="#i-h1"/></svg>Перше півріччя 2026</p>
+          <p class="card__period">Перше півріччя 2026</p>
           <h3 class="card__title"><a href="https://imi.org.ua/monitorings/bilyj-spysok-imi-za-pershe-pivrichchya-2026-roku-uvijshly-18-media" target="_blank" rel="noopener">Білий список ІМІ за перше півріччя 2026 року: увійшли 18 медіа</a></h3>
           <p class="card__lead">Список виріс на одне медіа порівняно з другим півріччям 2025 року. До нього повернулося NV — одне з найпомітніших покращень цього року.</p>
           <ul class="meta">
-            <li><svg><use href="#i-cal"/></svg>19 червня 2026</li>
-            <li><svg><use href="#i-media"/></svg>18 медіа</li>
-            <li><svg><use href="#i-check"/></svg>≈96% стандартів</li>
+            <li><svg><use href="#i-cal"/></svg><span>19 червня 2026</span></li>
+            <li><svg><use href="#i-media"/></svg><span>18 медіа</span></li>
+            <li><svg><use href="#i-check"/></svg><span>≈96% стандартів</span></li>
           </ul>
         </div>
       </article>
@@ -145,11 +142,11 @@
             <span class="card__go"><svg><use href="#i-arrow"/></svg></span>
           </a>
           <div class="card__body">
-            <p class="card__period"><svg><use href="#i-h2"/></svg>Друге півріччя 2025</p>
+            <p class="card__period">Друге півріччя 2025</p>
             <h3 class="card__title"><a href="https://imi.org.ua/monitorings/bilyj-spysok-imi-za-druge-pivrichchya-2025-roku-uvijshly-17-media" target="_blank" rel="noopener">Білий список ІМІ за друге півріччя 2025 року: увійшли 17 медіа</a></h3>
             <ul class="meta">
-              <li><svg><use href="#i-cal"/></svg>16 грудня 2025</li>
-              <li><svg><use href="#i-media"/></svg>17 медіа</li>
+              <li><svg><use href="#i-cal"/></svg><span>16 грудня 2025</span></li>
+              <li><svg><use href="#i-media"/></svg><span>17 медіа</span></li>
             </ul>
           </div>
         </article>
@@ -160,11 +157,11 @@
             <span class="card__go"><svg><use href="#i-arrow"/></svg></span>
           </a>
           <div class="card__body">
-            <p class="card__period"><svg><use href="#i-h2"/></svg>Друге півріччя 2024</p>
+            <p class="card__period">Друге півріччя 2024</p>
             <h3 class="card__title"><a href="https://imi.org.ua/monitorings/bilyj-spysok-imi-za-druge-pivrichchya-2024-roku-uvishly-13-media-i64640" target="_blank" rel="noopener">Білий список ІМІ за друге півріччя 2024 року: увійшли 13 медіа</a></h3>
             <ul class="meta">
-              <li><svg><use href="#i-cal"/></svg>1 листопада 2024</li>
-              <li><svg><use href="#i-media"/></svg>13 медіа</li>
+              <li><svg><use href="#i-cal"/></svg><span>1 листопада 2024</span></li>
+              <li><svg><use href="#i-media"/></svg><span>13 медіа</span></li>
             </ul>
           </div>
         </article>
@@ -177,10 +174,7 @@
 <section class="section section--tint" id="method">
   <div class="wrap">
     <div class="sec-head">
-      <div>
-        <p class="kicker">Як оцінюємо</p>
-        <h2>Два етапи перевірки</h2>
-      </div>
+      <h2>Два етапи перевірки</h2>
       <p class="sec-head__note">Щоб потрапити до списку, медіа має пройти обидва етапи глибинного моніторингу.</p>
     </div>
     <div class="steps">
@@ -216,55 +210,52 @@
 <section class="section" id="archive">
   <div class="wrap">
     <div class="sec-head">
-      <div>
-        <p class="kicker">Архів</p>
-        <h2>Попередні випуски</h2>
-      </div>
-      <p class="sec-head__note">Усі списки з 2019 року — від першого моніторингу за комплексною методологією.</p>
+      <h2>Попередні випуски</h2>
+      <p class="sec-head__note">Усі списки з 2019 року, починаючи з першого моніторингу за комплексною методологією.</p>
     </div>
 
     <div class="archive">
       <a class="tile reveal" href="https://imi.org.ua/monitorings/bilyj-spysok-11-media-shho-staly-najyakisnishymy-i61483" target="_blank" rel="noopener">
-        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-h1"/></svg></span><span class="tile__year">2024</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
+        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-check"/></svg></span><span class="tile__year">2024</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
         <span class="tile__period">Перше півріччя</span>
         <span class="tile__title">Білий список: 11 медіа, що стали найякіснішими</span>
-        <span class="tile__meta"><span><svg><use href="#i-media"/></svg>11 медіа</span><span><svg><use href="#i-cal"/></svg>21.05.2024</span></span>
+        <span class="tile__meta"><span><svg><use href="#i-media"/></svg><span class="t">11 медіа</span></span><span><svg><use href="#i-cal"/></svg><span class="t">21.05.2024</span></span></span>
       </a>
       <a class="tile reveal" href="https://imi.org.ua/monitorings/onlajn-media-shho-staly-najyakisnishymy-bilyj-spysok-drugogo-pivrichchya-2023-i55817" target="_blank" rel="noopener">
-        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-h2"/></svg></span><span class="tile__year">2023</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
+        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-check"/></svg></span><span class="tile__year">2023</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
         <span class="tile__period">Друге півріччя</span>
         <span class="tile__title">Онлайн-медіа, що стали найякіснішими: Білий список другого півріччя 2023</span>
-        <span class="tile__meta"><span><svg><use href="#i-media"/></svg>9 медіа</span><span><svg><use href="#i-cal"/></svg>29.09.2023</span></span>
+        <span class="tile__meta"><span><svg><use href="#i-media"/></svg><span class="t">9 медіа</span></span><span><svg><use href="#i-cal"/></svg><span class="t">29.09.2023</span></span></span>
       </a>
       <a class="tile reveal" href="https://imi.org.ua/monitorings/onlajn-media-shho-staly-najyakisnishymy-monitoryng-imi-i51820" target="_blank" rel="noopener">
-        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-h1"/></svg></span><span class="tile__year">2023</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
+        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-check"/></svg></span><span class="tile__year">2023</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
         <span class="tile__period">Перше півріччя</span>
         <span class="tile__title">Онлайн-медіа, що стали найякіснішими: моніторинг ІМІ</span>
-        <span class="tile__meta"><span><svg><use href="#i-media"/></svg>9 медіа</span><span><svg><use href="#i-cal"/></svg>31.03.2023</span></span>
+        <span class="tile__meta"><span><svg><use href="#i-media"/></svg><span class="t">9 медіа</span></span><span><svg><use href="#i-cal"/></svg><span class="t">31.03.2023</span></span></span>
       </a>
       <a class="tile reveal" href="https://imi.org.ua/monitorings/dev-yat-onlajn-media-shho-staly-najyakisnishymy-monitoryng-imi-i47998" target="_blank" rel="noopener">
-        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-h2"/></svg></span><span class="tile__year">2022</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
+        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-check"/></svg></span><span class="tile__year">2022</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
         <span class="tile__period">Друге півріччя</span>
         <span class="tile__title">Дев’ять онлайн-медіа, що стали найякіснішими: моніторинг ІМІ</span>
-        <span class="tile__meta"><span><svg><use href="#i-media"/></svg>9 медіа</span><span><svg><use href="#i-cal"/></svg>27.09.2022</span></span>
+        <span class="tile__meta"><span><svg><use href="#i-media"/></svg><span class="t">9 медіа</span></span><span><svg><use href="#i-cal"/></svg><span class="t">27.09.2022</span></span></span>
       </a>
       <a class="tile reveal" href="https://imi.org.ua/monitorings/bilyj-spysok-10-media-shho-staly-najyakisnishymy-i41541" target="_blank" rel="noopener">
-        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-h2"/></svg></span><span class="tile__year">2021</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
+        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-check"/></svg></span><span class="tile__year">2021</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
         <span class="tile__period">Друге півріччя</span>
         <span class="tile__title">Білий список: 10 медіа, що стали найякіснішими</span>
-        <span class="tile__meta"><span><svg><use href="#i-media"/></svg>10 медіа</span><span><svg><use href="#i-cal"/></svg>29.09.2021</span></span>
+        <span class="tile__meta"><span><svg><use href="#i-media"/></svg><span class="t">10 медіа</span></span><span><svg><use href="#i-cal"/></svg><span class="t">29.09.2021</span></span></span>
       </a>
       <a class="tile reveal" href="https://imi.org.ua/news/bilyj-spysok-visim-media-shho-staly-najyakisnishymy-i37769" target="_blank" rel="noopener">
-        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-h1"/></svg></span><span class="tile__year">2021</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
+        <span class="tile__top"><span class="tile__ico"><svg><use href="#i-check"/></svg></span><span class="tile__year">2021</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
         <span class="tile__period">Перше півріччя</span>
         <span class="tile__title">Білий список: вісім медіа, що стали найякіснішими</span>
-        <span class="tile__meta"><span><svg><use href="#i-media"/></svg>8 медіа</span><span><svg><use href="#i-cal"/></svg>24.02.2021</span></span>
+        <span class="tile__meta"><span><svg><use href="#i-media"/></svg><span class="t">8 медіа</span></span><span><svg><use href="#i-cal"/></svg><span class="t">24.02.2021</span></span></span>
       </a>
       <a class="tile tile--wide reveal" href="https://imi.org.ua/monitorings/imi-pidbyv-pidsumky-monitoryngu-onlajn-zmi-za-novoyu-kompleksnoyu-metodologiyeyu-otsinky-i65012" target="_blank" rel="noopener">
         <span class="tile__top"><span class="tile__ico tile__ico--flag"><svg><use href="#i-flag"/></svg></span><span class="tile__year">2019</span><span class="tile__go"><svg><use href="#i-arrow"/></svg></span></span>
-        <span class="tile__period">Перше півріччя · перший випуск</span>
+        <span class="tile__period">Перше півріччя<i class="sep" aria-hidden="true"></i>Перший випуск</span>
         <span class="tile__title">ІМІ підбив підсумки моніторингу онлайн-ЗМІ за новою комплексною методологією оцінки</span>
-        <span class="tile__meta"><span><svg><use href="#i-media"/></svg>10 медіа</span><span><svg><use href="#i-cal"/></svg>28.05.2019</span></span>
+        <span class="tile__meta"><span><svg><use href="#i-media"/></svg><span class="t">10 медіа</span></span><span><svg><use href="#i-cal"/></svg><span class="t">28.05.2019</span></span></span>
       </a>
       <div class="tile tile--next reveal">
         <span class="tile__top"><span class="tile__ico"><svg><use href="#i-refresh"/></svg></span></span>
@@ -286,8 +277,8 @@
       <p>Інститут масової інформації — медійна громадська організація, яка працює з 1996 року: захищає права журналістів, аналізує медіасферу та протидіє пропаганді й дезінформації.</p>
     </div>
     <div class="footer__links">
-      <a href="https://imi.org.ua/doslidzhennya-standartiv" target="_blank" rel="noopener">Дослідження стандартів на сайті ІМІ <svg><use href="#i-arrow"/></svg></a>
-      <a href="https://imi.org.ua/" target="_blank" rel="noopener">imi.org.ua <svg><use href="#i-arrow"/></svg></a>
+      <a href="https://imi.org.ua/doslidzhennya-standartiv" target="_blank" rel="noopener"><span>Дослідження стандартів на сайті ІМІ</span><svg><use href="#i-arrow"/></svg></a>
+      <a href="https://imi.org.ua/" target="_blank" rel="noopener"><span>imi.org.ua</span><svg><use href="#i-arrow"/></svg></a>
     </div>
   </div>
   <div class="wrap footer__bottom">© Інститут масової інформації</div>
