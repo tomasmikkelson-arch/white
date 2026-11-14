@@ -56,12 +56,13 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; letter-sp
 .topbar { position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,.97); border-bottom: 1px solid var(--line); transition: box-shadow .25s; }
 .topbar.is-scrolled { box-shadow: 0 10px 30px -22px rgba(20,28,80,.55); }
 .topbar__in { display: flex; align-items: center; gap: 22px; height: var(--header); }
-.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
-.brand img { height: 52px; width: auto; }
-.brand__sep { width: 1px; height: 44px; background: var(--line); }
-.brand--wl .wl-mark { height: 48px; width: 48px; border-radius: 13px; box-shadow: 0 0 0 1px var(--line), 0 6px 14px -8px rgba(40,60,200,.55); transition: transform .3s var(--ease); }
-.brand--wl:hover .wl-mark { transform: rotate(-6deg) scale(1.04); }
-.brand--wl span { font: 700 17px/1.05 var(--display); }
+/* логотипи ІМІ та ЄС однакової висоти: чорний квадрат ІМІ = синій прапор ЄС.
+   У SVG прапора є біла рамка (~3% зверху й знизу), тому сам файл трохи вищий і з від'ємним відступом. */
+.brand-row { --logo-h: 52px; display: flex; align-items: center; gap: 22px; flex-wrap: nowrap; min-width: 0; }
+.brand { display: block; flex: 0 0 auto; text-decoration: none; }
+.logo-imi { height: var(--logo-h); width: auto; display: block; }
+.logo-eu { height: calc(var(--logo-h) * 200.28 / 189.07); margin-block: calc(var(--logo-h) * -0.03); width: auto; display: block; flex: 0 0 auto; }
+.brand__sep { flex: 0 0 1px; width: 1px; height: calc(var(--logo-h) * .8); background: var(--line); }
 
 .topnav { position: relative; margin-left: auto; display: flex; align-items: center; gap: 2px; padding: 5px; border-radius: 99px; background: var(--paper); border: 1px solid var(--line); }
 .topnav a { position: relative; z-index: 1; display: inline-flex; align-items: center; height: 42px; padding: 0 20px; border-radius: 99px; text-decoration: none; font-weight: 600; font-size: 15px; color: var(--ink-2); transition: color .25s; }
@@ -185,7 +186,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; letter-sp
 .card--xl .card__cover { flex: 1 1 auto; min-height: 320px; }
 .card--xl .card__body { padding: 28px 32px 30px; gap: 12px; }
 .card--xl .card__title { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.08; letter-spacing: -.02em; }
-.card--md .card__cover { aspect-ratio: 2 / 1; flex: none; }
+.card--md .card__cover { flex: none; }
+.card--md .card__cover img { height: auto; }
 .card--md .card__body { padding: 20px 22px 22px; gap: 8px; }
 .card--md .card__title { font-size: 19px; }
 
@@ -254,9 +256,8 @@ a.tile:hover .tile__ico--flag { background: var(--ink); color: var(--yellow); }
 }
 @media (max-width: 900px) {
   :root { --header: 80px; }
+  .brand-row { --logo-h: 44px; }
   .topnav { display: none; }
-  .brand img { height: 44px; }
-  .brand--wl .wl-mark { height: 42px; width: 42px; }
   .featured { grid-template-columns: 1fr; }
   .featured__side { grid-template-rows: none; grid-template-columns: 1fr 1fr; }
   /* на планшеті й телефоні обкладинки показуємо повністю, без обрізання */
@@ -270,12 +271,10 @@ a.tile:hover .tile__ico--flag { background: var(--ink); color: var(--yellow); }
   .footer__links { align-items: flex-start; }
 }
 @media (max-width: 640px) {
-  :root { --header: 68px; }
+  :root { --header: 72px; }
+  .brand-row { --logo-h: min(38px, calc((100vw - 64px) / 8.5)); gap: clamp(10px, 3vw, 16px); }
   .wrap { width: calc(100% - 32px); }
   .topbar__in { gap: 14px; }
-  .brand img { height: 38px; }
-  .brand--wl .wl-mark { height: 38px; width: 38px; border-radius: 11px; }
-  .brand--wl span { font-size: 15px; }
   .hero { padding: 48px 0 32px; }
   .hero__lead { font-size: 17px; }
   .hero__cta { flex-direction: column; }
