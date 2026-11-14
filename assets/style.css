@@ -259,7 +259,9 @@ a.tile:hover .tile__ico--flag { background: var(--ink); color: var(--yellow); }
   .brand--wl .wl-mark { height: 42px; width: 42px; }
   .featured { grid-template-columns: 1fr; }
   .featured__side { grid-template-rows: none; grid-template-columns: 1fr 1fr; }
-  .card--xl .card__cover { flex: none; aspect-ratio: 16 / 9; min-height: 0; }
+  /* на планшеті й телефоні обкладинки показуємо повністю, без обрізання */
+  .card--xl .card__cover, .card--md .card__cover { flex: none; aspect-ratio: auto; min-height: 0; }
+  .card__cover img { height: auto; }
   .archive { grid-template-columns: repeat(2, 1fr); }
   .sec-head { grid-template-columns: 1fr; gap: 16px; }
   .roster { flex-direction: column; gap: 14px; }
@@ -297,4 +299,8 @@ a.tile:hover .tile__ico--flag { background: var(--ink); color: var(--yellow); }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
   .js .bar i { transform: none; }
+}
+/* на сенсорних екранах обкладинка не збільшується при дотику, щоб краї не обрізались */
+@media (hover: none) {
+  .card:hover .card__cover img { transform: none; }
 }
