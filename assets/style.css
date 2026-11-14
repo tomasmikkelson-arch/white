@@ -210,7 +210,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; letter-sp
 .step p a:hover { text-decoration-color: currentColor; }
 .step__list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; color: var(--ink-2); font-size: 15px; line-height: 1.5; }
 .step__list li { position: relative; padding-left: 16px; }
-.step__list li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 2px; background: var(--blue); }
+.step__list li::before { content: ""; position: absolute; left: 0; top: .47em; width: 6px; height: 6px; border-radius: 2px; background: var(--blue); }
 .step--final { background: var(--blue-10); }
 .step--final:hover { background: #fff; }
 
