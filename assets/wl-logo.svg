@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Білий список ІМІ">
+  <!-- Тимчасова версія знака. Буде замінена на векторний оригінал. -->
+  <rect width="120" height="120" rx="30" fill="#fff"/>
+  <path d="M62 23 L32 33 V60 C32 74 39 85 49 92" fill="none" stroke="#222" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M45 95 C64 92 80 80 88 60 C86 58 84 58 82 59 C74 70 62 77 46 80 C42 85 42 91 45 95 Z" fill="#222"/>
+  <path d="M43 57 L55 68 L86 34" fill="none" stroke="#405BFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
