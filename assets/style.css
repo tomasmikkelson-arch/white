@@ -226,8 +226,8 @@ a.tile:hover .tile__title { color: var(--blue-ink); }
 .tile__meta svg { color: var(--blue); font-size: 16px; }
 .tile__meta .t { transform: translateY(var(--nudge)); }
 .tile--wide { grid-column: span 2; background: linear-gradient(120deg, #fff 55%, var(--blue-10)); }
-.tile__ico--flag { background: var(--yellow); color: var(--ink); }
-a.tile:hover .tile__ico--flag { background: var(--ink); color: var(--yellow); }
+.tile__ico--first { background: var(--yellow); color: var(--ink); }
+a.tile:hover .tile__ico--first { background: var(--ink); color: var(--yellow); }
 .tile--next { background: transparent; border: 1.5px dashed var(--blue-30); color: var(--ink-2); }
 .tile--next .tile__ico { background: transparent; border: 1.5px dashed var(--blue-30); }
 .tile__note { color: var(--muted); font-size: 14.5px; line-height: 1.5; }
