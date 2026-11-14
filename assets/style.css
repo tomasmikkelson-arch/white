@@ -243,14 +243,15 @@ a.tile:hover .tile__ico--first { background: var(--ink); color: var(--yellow); }
 .footer__in { display: flex; justify-content: space-between; gap: 40px; align-items: flex-start; }
 .footer__brand { max-width: 560px; }
 .footer__logos { display: flex; align-items: center; gap: 22px; margin-bottom: 20px; flex-wrap: nowrap; }
-.footer__logos img { height: 50px; width: auto; display: block; flex: 0 0 auto; }
-.footer__sep { flex: 0 0 1px; width: 1px; height: 40px; background: var(--line); }
+.footer__logos img { height: 56px; width: auto; display: block; flex: 0 0 auto; }
 .footer__brand p { margin: 0; color: var(--muted); font-size: 15px; }
 .footer__links { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; }
 .footer__links a { display: inline-flex; align-items: center; gap: 8px; color: var(--blue-ink); font-weight: 700; text-decoration: none; transition: gap .25s var(--ease); }
 .footer__links a span { transform: translateY(var(--nudge)); }
 .footer__links a:hover { gap: 12px; }
-.footer__bottom { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.footer__bottom { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; align-items: center; gap: 12px; }
+.footer__bottom > span:last-child { transform: translateY(var(--nudge)); }
+.footer__years { display: inline-flex; align-items: center; height: 28px; padding: 0 12px; padding-top: calc(var(--nudge) * 2); border-radius: 99px; background: var(--blue-10); color: var(--blue-ink); font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
 
 /* ───────── поява при прокрутці ───────── */
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease), box-shadow .35s var(--ease), border-color .25s, background .25s; }
@@ -314,5 +315,5 @@ a.tile:hover .tile__ico--first { background: var(--ink); color: var(--yellow); }
 }
 @media (max-width: 640px) {
   .footer__logos { gap: 14px; }
-  .footer__logos img { height: min(44px, calc((100vw - 32px - 15px) / 6.5)); }
+  .footer__logos img { height: 50px; }
   }
