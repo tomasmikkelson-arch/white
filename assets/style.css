@@ -39,7 +39,8 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header) + 12px); }
 html, body { margin: 0; }
-body { background: var(--paper); color: var(--ink); font: 400 16px/1.6 var(--text); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { overflow-wrap: break-word; background: var(--paper); color: var(--ink); font: 400 16px/1.6 var(--text); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
 svg { width: 1em; height: 1em; flex: none; }
@@ -101,7 +102,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; letter-sp
 
 /* цифри + графік */
 .stats { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); border-radius: 28px; padding: 24px; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
-.stats__row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.stats__row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .stat { background: rgba(255,255,255,.12); border-radius: 16px; padding: 16px; }
 .stat b { display: block; font: 700 34px/1 var(--display); letter-spacing: -.02em; margin-bottom: 8px; }
 .stat span { display: block; font-size: 13px; line-height: 1.35; color: rgba(255,255,255,.8); }
@@ -118,7 +119,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; letter-sp
 .years { list-style: none; margin: 0; padding: 0; display: flex; gap: 12px; align-items: stretch; height: 176px; }
 .years li { flex: var(--n) 1 0; display: flex; flex-direction: column; min-width: 0; }
 .yr__bars { flex: 1; display: flex; align-items: flex-end; gap: 4px; padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,.3); }
-.yr__l { padding-top: 8px; text-align: center; font-size: 12px; font-weight: 600; color: rgba(255,255,255,.78); font-variant-numeric: tabular-nums; }
+.yr__short { display: none; }
+.yr__l { white-space: nowrap; padding-top: 8px; text-align: center; font-size: 12px; font-weight: 600; color: rgba(255,255,255,.78); font-variant-numeric: tabular-nums; }
 .years li:last-child .yr__l { color: #fff; font-weight: 700; }
 .bar { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 8px; height: 100%; outline: none; cursor: default; }
 .bar b { font: 700 14px/1 var(--display); color: rgba(255,255,255,.9); }
@@ -254,7 +256,7 @@ a.tile:hover .tile__ico--first { background: var(--ink); color: var(--yellow); }
 
 /* ───────── адаптив ───────── */
 @media (max-width: 1080px) {
-  .hero__in { grid-template-columns: 1fr; gap: 40px; }
+  .hero__in { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .stats { max-width: 640px; }
   .steps { grid-template-columns: repeat(2, 1fr); }
 }
@@ -280,12 +282,22 @@ a.tile:hover .tile__ico--first { background: var(--ink); color: var(--yellow); }
   .wrap { width: calc(100% - 32px); }
   .topbar__in { gap: 16px; }
   .hero { padding: 48px 0 32px; }
+  /* заголовок під ширину телефона: «і відповідальних» з нерозривним пробілом має влізти в рядок навіть зі збільшеним системним шрифтом */
+  .hero h1 { font-size: clamp(28px, 8.8vw, 40px); }
+  .tip { display: none; }
+  .bar:hover b, .bar:focus-visible b { opacity: 1; }
+  .btn { min-width: 0; }
   .hero__lead { font-size: 17px; }
   .hero__cta { flex-direction: column; }
   .btn { width: 100%; }
   .stats { padding: 16px; border-radius: 20px; }
-  .stat b { font-size: 26px; }
-  .stat span { font-size: 12px; }
+  /* на телефоні цифри стоять стовпчиком: число зліва, підпис справа, щоб нічого не виходило за екран */
+  .stats__row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .stat { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+  .stat b { flex: 0 0 auto; min-width: 88px; margin: 0; font-size: 28px; }
+  .stat span { font-size: 13px; }
+  .yr__full { display: none; }
+  .yr__short { display: inline; }
   .legend { gap: 10px; font-size: 11.5px; }
   .years { gap: 8px; height: 160px; --bh: 88px; }
   .yr__l { font-size: 10.5px; }
